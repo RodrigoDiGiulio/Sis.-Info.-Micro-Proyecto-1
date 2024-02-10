@@ -3,19 +3,41 @@ body {
     background-color: #222831;
 }
 
+p {
+    /* TEXT */
+    font-family: monospace;
+    font-size: 3vh;
+    color: #EEEEEE;
+
+    /* MARGIN */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .palett{
     color: #222831;
     color: #393E46;
     color: #00ADB5;
     color: #EEEEEE;
+    color: #de1818;
+    color: #cede18;
 }
 
 h1 {
+    /* TEXT */
     text-shadow: 5px 5px 5px #de1818;
     font-family: monospace;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 10vh;
     color: #000000;
+
+    /* MARGIN */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 h2 {
@@ -23,14 +45,14 @@ h2 {
     text-shadow: 5px 5px 5px #1fc82b;
     font-family: monospace;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 7vh;
     color: #000000;
 
     /* MARGIN */
-    margin-top: 50;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 h3 {
@@ -38,26 +60,26 @@ h3 {
     text-shadow: 5px 5px 5px #ea921e;
     font-family: monospace;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 7vh;
     color: #000000;
 
     /* MARGIN */
-    margin-top: 50;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
-input[type="player"] {
+button[type="startGame"]{
     /* SIZE */
     width: 100px;
     height: 40px;
 
     /* MARGIN */
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 
     /* COLOR */
     background-color: #00ADB5;
@@ -72,6 +94,98 @@ input[type="player"] {
     border-width: 5px;
     border-radius: 10px;
     border-style: solid;
+}
+
+button[type="cardButton"]{
+    /* COLOR */
+    background-color: transparent;
+
+    /* BORDER */
+    border-color: transparent;
+}
+
+button[type="cardButton"]:hover{
+    /* COLOR */
+    background-color: #27b500;
+
+    /* BORDER */
+    border-color: transparent;
+}
+
+input[type="player"] {
+    /* SIZE */
+    width: 100px;
+    height: 40px;
+
+    /* MARGIN */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    /* COLOR */
+    background-color: #00ADB5;
+    
+    /* TEXT */
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+
+    /* BORDER */
+    border-color: #000000;
+    border-width: 5px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.nameRank {
+    /* TEXT */
+    text-shadow: 5px 5px 5px #ea921e;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 7vh;
+    color: #000000;
+
+    /* MARGIN */
+    margin-top: -5px;
+    margin-bottom: 0px;
+    margin-left: -5px;
+    margin-right: 00px;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #000000;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+}
+
+.ranking {
+    /* MARGIN */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    /* margin: auto; */
+    
+    /* SIZE */
+    width: 100vh;
+    height: 100vv;
+    
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    grid-template-rows: repeat(2, 0fr);
+    gap: 0px;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #000000;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
 }
 
 .cardSelector {
@@ -182,4 +296,258 @@ input[type="player"] {
     font-weight: bold;
     line-height: 50px;
     color: #000000;
+}
+
+.bingoMachineBallBase {
+    /* TRANSFORM */
+    transform: rotate(-60deg);
+
+    /* SIZE */
+    width: 10px;
+    height: 10px;
+
+    /* COLOR */
+    background-color: #393E46;
+
+    /* MARGIN */
+    margin-left: -76px;
+    margin-right: 0px;
+    margin-top: 32px;
+    margin-bottom: 0px;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 65px;
+    border-bottom-width: 65px;
+}
+
+.triangleLeft {
+    /* TRANSFORM */
+    display: flex;
+    transform: rotate(30deg);
+
+    /* SIZE */
+    width: 0px;
+    height: 120px;
+    background-color: #393E46;
+
+    /* MARGIN */
+    margin-left: 20px;
+    margin-right: 0px;
+    margin-top: -10px;
+    margin-bottom: 0px;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+}
+
+.triangleRight {
+    /* TRANSFORM */
+    display: flex;
+    transform: rotate(-60deg);
+
+    /* SIZE */
+    width: 0px;
+    height: 120px;
+    background-color: #393E46;
+
+    /* MARGIN */
+    margin-left: 50px;
+    margin-right: 0px;
+    margin-top: -37px;
+    margin-bottom: 0px;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+}
+
+.meshV {
+    /* SIZE */
+    width: 0px;
+    height: 120px;
+    background-color: #393E46;
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+}
+
+.meshH {
+    /* SIZE */
+    width: 120px;
+    height: 0px;
+    background-color: #393E46;
+
+    /* MARGIN */
+    margin-left: -60px;
+    margin-right: 0px;
+    margin-top: 56px;
+    margin-bottom: 0px;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+}
+
+.bingoMachineBallPartS {
+    /* BALL */
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+
+    /* TEXT */
+    text-align: center;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: normal;
+    color: #000000;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+
+    /* CENTERING */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.bingoMachineBallPartM {
+    /* BALL */
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border-radius: 50%;
+
+    /* TEXT */
+    text-align: center;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: normal;
+    color: #000000;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+
+    /* CENTERING */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.bingoMachineBallPartB {
+    /* BALL */
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border-radius: 50%;
+
+    /* TEXT */
+    text-align: center;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: normal;
+    color: #000000;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+
+    /* CENTERING */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.ballGrid {
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(12, 0fr);
+    grid-template-rows: repeat(3, 0fr);
+    gap: 10px;
+
+    /* MARGIN */
+    margin-left: 150px;
+    margin-right: 0px;
+    margin-top: -100px;
+    margin-bottom: 0px;
+}
+
+.ball {
+    /* BALL */
+    width: 10vh;
+    height: 10vh;
+    background-color: #EEEEEE;
+    border-radius: 50%;
+
+    /* TEXT */
+    text-align: center;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: normal;
+    color: #000000;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+
+    /* CENTERING */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
