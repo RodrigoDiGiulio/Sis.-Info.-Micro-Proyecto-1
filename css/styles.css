@@ -1,7 +1,185 @@
 body {
     text-align: center;
-    background-color: #f0e8c5;
+    background-color: #222831;
 }
+
+.palett{
+    color: #222831;
+    color: #393E46;
+    color: #00ADB5;
+    color: #EEEEEE;
+}
+
 h1 {
-    color: #333;
+    text-shadow: 5px 5px 5px #de1818;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #000000;
+}
+
+h2 {
+    /* TEXT */
+    text-shadow: 5px 5px 5px #1fc82b;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #000000;
+
+    /* MARGIN */
+    margin-top: 50;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h3 {
+    /* TEXT */
+    text-shadow: 5px 5px 5px #ea921e;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #000000;
+
+    /* MARGIN */
+    margin-top: 50;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+input[type="player"] {
+    /* SIZE */
+    width: 100px;
+    height: 40px;
+
+    /* MARGIN */
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    /* COLOR */
+    background-color: #00ADB5;
+    
+    /* TEXT */
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+
+    /* BORDER */
+    border-color: #000000;
+    border-width: 5px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.cardSelector {
+    /* MARGIN */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    /* margin: auto; */
+
+    /* SIZE */
+    width: 100vh;
+    height: 100vv;
+
+    /* COLOR */
+    /* background-color: #de1818; */
+
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    grid-template-rows: repeat(2, 0fr);
+    gap: 10px;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #000000;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+}
+
+.card {
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* SIZE */
+    width: 300px;
+    height: 300px;
+
+    /* COLOR */
+    background-color: #00ADB5;
+
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(5, 0fr);
+    grid-template-rows: repeat(5, 0fr);
+    gap: 0px;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-radius: 10px;
+}
+
+.emptyBox {
+    /* SIZE */
+    width: 60px;
+    height: 60px;
+
+    /* COLOR */
+    /* background-color: #003cff; */
+
+    /* TEXT */
+    text-align: center;
+    text-align: inherit;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: 50px;
+    color: #000000;
+}
+
+.box {
+    /* SIZE */
+    width: 50px;
+    height: 50px;
+
+    /* COLOR */
+    background-color: #EEEEEE;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+
+    /* MARGIN */
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+
+    /* TEXT */
+    text-align: center;
+    text-align: inherit;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: 50px;
+    color: #000000;
 }
