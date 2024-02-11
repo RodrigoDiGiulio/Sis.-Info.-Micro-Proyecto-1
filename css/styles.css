@@ -40,11 +40,12 @@ h1 {
     margin-right: 0px;
 }
 
-h2 {
+.h2 {
     /* TEXT */
     text-shadow: 5px 5px 5px #1fc82b;
     font-family: monospace;
     text-transform: uppercase;
+    font-weight: bold;
     font-size: 7vh;
     color: #000000;
 
@@ -246,6 +247,17 @@ input[type="player"] {
     border-top-width: 10px;
     border-bottom-width: 10px;
     border-radius: 10px;
+
+    /* TEXT */
+    text-shadow: none;
+    text-align: center;
+    text-align: inherit;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: 50px;
+    color: #000000;
+
 }
 
 .emptyBox {

@@ -4,42 +4,35 @@
     <title>PLAYING...</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/bingoMachine.css">
+    <script async src="../javascript/home.js"></script>
 </head>
 <body>
     <h1 id="bingo">¡BINGO!</h1>
-    <div class="bingoMachineBallPartB">
-        <div class="bingoMachineBallPartM">
-            <div class="bingoMachineBallPartS">
-                <div class="meshV">
-                    <div class="meshH">
-                        <div class="triangleLeft">
-                            <div class="triangleRight">
-                                <div class="bingoMachineBallBase"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="bingoMachineBallPartB" id="shadowMachine">
+        <div class="bingoMachineBallPartM"></div>
+        <div class="bingoMachineBallPartS"></div>
+        <div class="meshV"></div>
+        <div class="meshH"></div>
+        <div class="bingoMachineBallBase">
+            <div class="triangleLeft"></div>
+            <div class="triangleRight"></div>
+        </div>
+    </div>
+    <div class="bingoMachineBallPartB" id="machine">
+        <div class="bingoMachineBallPartM"></div>
+        <div class="bingoMachineBallPartS"></div>
+        <div class="meshV"></div>
+        <div class="meshH"></div>
+        <div class="bingoMachineBallBase">
+            <div class="triangleLeft"></div>
+            <div class="triangleRight"></div>
         </div>
     </div>
     <div class="ballGrid" id="ballGrid">
     </div>
     <p id="turn"></p>
-    <button type="debug" onclick="checkCard('cardP1'),checkCard('cardP2'),checkCard('cardP3'),checkCard('cardP4')">DEBUG</button>
-    <div class="cardSelector">
-        <h2 id="player1"></h2>
-        <h3 id="player2"></h3>
-        <div class="card" id="cardP1">
-        </div>
-        <div class="card" id="cardP2">
-        </div>
-        <h2 id="player3"></h2>
-        <h3 id="player4"></h3>
-        <div class="card" id="cardP3">
-        </div>
-        <div class="card" id="cardP4">
-        </div>
+    <button type="debug" onclick="DEBUG()">DEBUG</button>
+    <div class="cardSelector" id="cardSelector">
     </div>
-    <script async src="../javascript/home.js"></script>
 </body>
 </html>

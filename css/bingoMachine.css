@@ -79,10 +79,10 @@
 
     /* ALIGNMENT */
     position: relative;
-    left: 12px;
-    right: 12px;
-    top: 12px;
-    bottom: 12px;
+    left: 32px;
+    right: 32px;
+    top: -64px;
+    bottom: -64px;
 }
 
 .meshV {
@@ -107,10 +107,10 @@
     
     /* ALIGNMENT */
     position: relative;
-    left: 16px;
-    right: 16px;
-    top: -40px;
-    bottom: -40px;
+    left: 56px;
+    right: 56px;
+    top: -155px;
+    bottom: -155px;
 }
 
 .meshH {
@@ -135,10 +135,40 @@
 
     /* ALIGNMENT */
     position: relative;
-    left: -64px;
-    right: -64px;
-    top: 52px;
-    bottom: 52px;
+    left: 0px;
+    right: 0px;
+    top: -224px;
+    bottom: -224px;
+}
+
+.bingoMachineBallBase {
+    /* SIZE */
+    width: 100px;
+    height: 10px;
+
+    /* COLOR */
+    background-color: #393E46;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: inherit;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* ALIGNMENT */
+    position: relative;
+    left: -10px;
+    right: -10px;
+    top: -140px;
+    bottom: -140px;
 }
 
 .triangleLeft {
@@ -166,10 +196,10 @@
 
     /* ALIGNMENT */
     position: relative;
-    left: 25px;
-    right: 25px;
-    top: -10px;
-    bottom: -10px;
+    left: 16px;
+    right: 16px;
+    top: -120px;
+    bottom: -120px;
 }
 
 .triangleRight {
@@ -193,38 +223,12 @@
     margin-bottom: 0px;
 
     /* TRANSFORM */
-    transform: rotate(-60deg);
+    transform: rotate(-30deg);
 
     /* ALIGNMENT */
     position: relative;
-    left: 50px;
-    right: 50px;
-    top: -35px;
-    bottom: -35px;
-}
-
-.bingoMachineBallBase {
-    /* SIZE */
-    width: 10px;
-    height: 10px;
-
-    /* COLOR */
-    background-color: inherit;
-
-    /* BORDER */
-    border-style: solid;
-    border-color: inherit;
-    border-left-width: 10px;
-    border-right-width: 10px;
-    border-top-width: 65px;
-    border-bottom-width: 65px;
-
-    /* TRANSFORM */
-    transform: rotate(-60deg);
-
-    /* MARGIN */
-    margin-left: -76px;
-    margin-right: 0px;
-    margin-top: 32px;
-    margin-bottom: 0px;
+    left: 76px;
+    right: 76px;
+    top: -248px;
+    bottom: -248px;
 }
