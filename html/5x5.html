@@ -1,126 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PLAYING...</title>
+    <title>PLAYING 5X5...</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bingoMachine.css">
+    <script async src="../javascript/home.js"></script>
 </head>
-<body>
+<body id="5X5">
     <h1 id="bingo">¡BINGO!</h1>
-    <p id="turn"></p>
-    <div class="cardSelector">
-        <h2 id="player1"></h2>
-        <h3 id="player2"></h3>
-        <div class="card">
-            <div class="emptyBox">B</div>
-            <div class="emptyBox">I</div>
-            <div class="emptyBox">N</div>
-            <div class="emptyBox">G</div>
-            <div class="emptyBox">O</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-        </div>
-        <div class="card">
-            <div class="emptyBox">B</div>
-            <div class="emptyBox">I</div>
-            <div class="emptyBox">N</div>
-            <div class="emptyBox">G</div>
-            <div class="emptyBox">O</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-        </div>
-        <h2 id="player3"></h2>
-        <h3 id="player4"></h3>
-        <div class="card">
-            <div class="emptyBox">B</div>
-            <div class="emptyBox">I</div>
-            <div class="emptyBox">N</div>
-            <div class="emptyBox">G</div>
-            <div class="emptyBox">O</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-        </div>
-        <div class="card">
-            <div class="emptyBox">B</div>
-            <div class="emptyBox">I</div>
-            <div class="emptyBox">N</div>
-            <div class="emptyBox">G</div>
-            <div class="emptyBox">O</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
-            <div class="box">##</div>
+    <!-- <div class="bingoMachineBallPartB" id="shadowMachine">
+        <div class="bingoMachineBallPartM"></div>
+        <div class="bingoMachineBallPartS"></div>
+        <div class="meshV"></div>
+        <div class="meshH"></div>
+        <div class="bingoMachineBallBase">
+            <div class="triangleLeft"></div>
+            <div class="triangleRight"></div>
         </div>
     </div>
-    <script async src="../javascript/home.js"></script>
+    <div class="bingoMachineBallPartB" id="machine">
+        <div class="bingoMachineBallPartM"></div>
+        <div class="bingoMachineBallPartS"></div>
+        <div class="meshV"></div>
+        <div class="meshH"></div>
+        <div class="bingoMachineBallBase">
+            <div class="triangleLeft"></div>
+            <div class="triangleRight"></div>
+        </div>
+    </div> -->
+    <div class="ballGrid" id="ballGrid">
+    </div>
+    <p id="turn"></p>
+    <button type="startGame" onclick="nextTurn()" id="nextTurn">Siguiente Turno</button>
+    <div class="cardSelector" id="cardSelector"></div>
 </body>
 </html>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PLAYING...</title>
+    <title>PLAYING 3X3...</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/bingoMachine.css">
     <script async src="../javascript/home.js"></script>
 </head>
-<body>
+<body id="3X3">
     <h1 id="bingo">¡BINGO!</h1>
-    <div class="bingoMachineBallPartB" id="shadowMachine">
+    <!-- <div class="bingoMachineBallPartB" id="shadowMachine">
         <div class="bingoMachineBallPartM"></div>
         <div class="bingoMachineBallPartS"></div>
         <div class="meshV"></div>
@@ -27,12 +27,11 @@
             <div class="triangleLeft"></div>
             <div class="triangleRight"></div>
         </div>
-    </div>
+    </div> -->
     <div class="ballGrid" id="ballGrid">
     </div>
     <p id="turn"></p>
-    <button type="debug" onclick="DEBUG()">DEBUG</button>
-    <div class="cardSelector" id="cardSelector">
-    </div>
+    <button type="startGame" onclick="nextTurn()" id="nextTurn">Siguiente Turno</button>
+    <div class="cardSelector" id="cardSelector"></div>
 </body>
 </html>
