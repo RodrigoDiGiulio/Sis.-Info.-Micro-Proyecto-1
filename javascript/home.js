@@ -1,5 +1,5 @@
 setInterval(redToYellow, 500);
-setInterval(nexBall, 500);
+setInterval(nexBall, 100);
 
 var bingoColor;
 var cardSize;
@@ -11,13 +11,58 @@ var player2 = {"name":"B"};
 var player3 = {"name":"C"};
 var player4 = {"name":"D"};
 
+createBox("cardP1");
+createBox("cardP2");
+createBox("cardP3");
+createBox("cardP4");
+
 // nextTurn();
 nexBall();
 assignName();
-addNumCard(player1);
-addNumCard(player2);
-addNumCard(player3);
-addNumCard(player4);
+shadowMachine();
+
+function createBox(card){
+    var numUsed = [];
+    for (i = 0; i < 25; i++){
+        var bingo = ["B","I","N","G","O"]
+        if (i < 5) {
+            var newBox = document.createElement("div");
+            newBox.className = "emptyBox";
+            newBox.innerHTML = bingo[i];
+            document.getElementById(card).appendChild(newBox);
+        } else if(i != 5 && i != 9 && i != 10 && i != 14 && i != 15 && i < 19){
+            var newBox = document.createElement("div");
+            newBox.className = "box";
+            newBox.id = card+i;
+            var next = false;
+            while (next == false){
+                var ranNum = Math.floor(Math.random() * 51);
+                if (numUsed.includes(ranNum) == false){
+                    card[ranNum] = false;
+                    numUsed.push(ranNum);
+                    newBox.innerHTML = ranNum;
+                    next = true;
+                }
+            }
+            next = false;
+            document.getElementById(card).appendChild(newBox);
+        } else{
+            var newBox = document.createElement("div");
+            newBox.className = "emptyBox";
+            document.getElementById(card).appendChild(newBox);
+        }
+    }
+}
+
+function checkCard(card){
+    for (i = 0; i < 25; i++){
+        for (var val of ballUsed){
+            if (document.getElementById(card).children[i].innerHTML == val && document.getElementById(card).children[i].innerHTML != ""){
+                document.getElementById(card).children[i].style.backgroundColor = "#1fc82b";
+            }
+        }
+    }
+}
 
 function nexBall(){
     if (ballUsed.length < 25){
@@ -25,33 +70,17 @@ function nexBall(){
         while (next == false){
             var ranNum = Math.floor(Math.random() * 51);
             if (ballUsed.includes(ranNum) == false){
+                var newBox = document.createElement("div");
+                newBox.className = "ball";
+                newBox.innerHTML = ranNum;
+                document.getElementById("ballGrid").appendChild(newBox);
                 ballUsed.push(ranNum);
-                document.getElementById("B"+turn).innerHTML = ranNum;
                 next = true;
             }
         }
         turn++;
     }
 }
-
-function addNumCard(player) {
-    var numUsed = [];
-    var next = false;
-    for (let i = 1; i < 10; i++){
-        while (next == false){
-            var ranNum = Math.floor(Math.random() * 51);
-            if (numUsed.includes(ranNum) == false){
-                player[ranNum] = false;
-                numUsed.push(ranNum);
-                document.getElementById(i).innerHTML = ranNum;
-                next = true;
-            }
-        }
-        next = false;
-    }
-    // alert(JSON.stringify(player));
-}
-
 
 function redToYellow() {
     if (bingoColor == 1){

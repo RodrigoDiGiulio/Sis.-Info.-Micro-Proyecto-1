@@ -1,0 +1,230 @@
+.bingoMachineBallPartB {
+    /* SPHERE */
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border-radius: 50%;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: #393E46;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* ALIGNMENT */
+    position: relative;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.bingoMachineBallPartM {
+    /* SPHERE */
+    width: 80px;
+    height: 80px;
+    background-color: inherit;
+    border-radius: 50%;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: inherit;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* ALIGNMENT */
+    position: relative;
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    bottom: 12px;
+}
+
+.bingoMachineBallPartS {
+    /* SPHERE */
+    width: 40px;
+    height: 40px;
+    background-color: inherit;
+    border-radius: 50%;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: inherit;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* ALIGNMENT */
+    position: relative;
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    bottom: 12px;
+}
+
+.meshV {
+    /* SIZE */
+    width: 0px;
+    height: 120px;
+    background-color: #393E46;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;   
+    
+    /* ALIGNMENT */
+    position: relative;
+    left: 16px;
+    right: 16px;
+    top: -40px;
+    bottom: -40px;
+}
+
+.meshH {
+    /* SIZE */
+    width: 120px;
+    height: 0px;
+    background-color: inherit;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: inherit;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* ALIGNMENT */
+    position: relative;
+    left: -64px;
+    right: -64px;
+    top: 52px;
+    bottom: 52px;
+}
+
+.triangleLeft {
+    /* SIZE */
+    width: 0px;
+    height: 120px;
+    background-color: inherit;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: inherit;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* TRANSFORM */
+    transform: rotate(30deg);
+
+    /* ALIGNMENT */
+    position: relative;
+    left: 25px;
+    right: 25px;
+    top: -10px;
+    bottom: -10px;
+}
+
+.triangleRight {
+    /* SIZE */
+    width: 0px;
+    height: 120px;
+    background-color: inherit;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: inherit;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+
+    /* MARGIN */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* TRANSFORM */
+    transform: rotate(-60deg);
+
+    /* ALIGNMENT */
+    position: relative;
+    left: 50px;
+    right: 50px;
+    top: -35px;
+    bottom: -35px;
+}
+
+.bingoMachineBallBase {
+    /* SIZE */
+    width: 10px;
+    height: 10px;
+
+    /* COLOR */
+    background-color: inherit;
+
+    /* BORDER */
+    border-style: solid;
+    border-color: inherit;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 65px;
+    border-bottom-width: 65px;
+
+    /* TRANSFORM */
+    transform: rotate(-60deg);
+
+    /* MARGIN */
+    margin-left: -76px;
+    margin-right: 0px;
+    margin-top: 32px;
+    margin-bottom: 0px;
+}
