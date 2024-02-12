@@ -56,7 +56,7 @@ h1 {
     font-family: monospace;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 7vw;
+    font-size: 5vw;
     color: #000000;
 
     /* MARGIN */
@@ -156,6 +156,10 @@ input[type="player"] {
 }
 
 .nameRank {
+    /* SIZE */
+    width: inherit;
+    height: inherit;
+
     /* TEXT */
     text-shadow: 5px 5px 5px #ea921e;
     font-family: monospace;
@@ -164,45 +168,37 @@ input[type="player"] {
     color: #000000;
 
     /* MARGIN */
-    margin-top: -5px;
-    margin-bottom: 0px;
-    margin-left: -5px;
-    margin-right: 00px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
 
     /* BORDER */
     border-style: solid;
     border-color: #000000;
-    border-left-width: 5px;
-    border-right-width: 5px;
-    border-top-width: 5px;
-    border-bottom-width: 5px;
+    border-left-width: 1vw;
+    border-right-width: 1vw;
+    border-top-width: 1vw;
+    border-bottom-width: 1vw;
 }
 
 .ranking {
     /* MARGIN */
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     margin-top: 10px;
-    margin-bottom: 0px;
-    /* margin: auto; */
-    
+    margin-bottom: 0;
+
     /* SIZE */
-    width: 100vh;
-    height: 100vv;
-    
+    width: 100%;
+    height: auto;
+
     /* GRID */
     display: grid;
-    grid-template-columns: repeat(2, 0fr);
-    grid-template-rows: repeat(2, 0fr);
-    gap: 0px;
-
-    /* BORDER */
-    border-style: solid;
-    border-color: #000000;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-top-width: 0px;
-    border-bottom-width: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+    justify-items: center;
+    align-items: center;
 }
 
 .cardSelector {
@@ -220,6 +216,27 @@ input[type="player"] {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20vw, 0fr));
     gap: 5vw;
+
+    /* BORDER */
+    border: 0px solid #000000;
+}
+
+.cardSelectorHome {
+    /* MARGIN */
+    margin-left: 0vw;
+    margin-right: 0vw;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    /* SIZE */
+    width: 100vw;
+    height: auto;
+
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vw;
+    place-items: center;
 
     /* BORDER */
     border: 0px solid #000000;
@@ -303,32 +320,6 @@ input[type="player"] {
     margin-top: -0.25vw;
     margin-bottom: -0.25vw;
 }
-
-/*
-.item{
-position: relative;
-    vertical-align: top;
-    display: inline-block;
-    line-height: 100px;
-    font-size: 11px;
-    margin: 8px !important;
-    width: 122px;
-    height: 115px;
-    background: #fff;
-    border: 1px solid #e2e2e2;
-    border-radius: 3px;
-    border: 2px outset red;
-    border-bottom-width: 3px;
-    overflow: hidden;
-    cursor: pointer;
-  }
-.myDiv {
-  display: block;
-  border: 5px outset blue;
-  background-color: lightblue;    
-  text-align: center;
-}
-*/
 
 .ballGrid {
     /* GRID */

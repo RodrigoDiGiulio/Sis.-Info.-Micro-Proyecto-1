@@ -13,8 +13,8 @@
     <input type="player" id="player2" placeholder="Nombre J2">
     <input type="player" id="player3" placeholder="Nombre J3">
     <input type="player" id="player4" placeholder="Nombre J4">
-    <div class="cardSelector">
-        <h2 class="h2">3X3</h2>
+    <div class="cardSelectorHome">
+        <h3>3X3</h2>
         <h3>5X5</h3>
         <button type="cardButton" onclick="cardSelected3x3()">
             <div class="card">
@@ -37,6 +37,11 @@
                 <div class="box">##</div>
                 <div class="box">##</div>
                 <div class="box">##</div>
+                <div class="emptyBox"></div>
+                <div class="emptyBox"></div>
+                <div class="emptyBox"></div>
+                <div class="emptyBox"></div>
+                <div class="emptyBox"></div>
                 <div class="emptyBox"></div>
             </div>
         </button>
@@ -71,11 +76,9 @@
         </button>
     </div>
     <button type="startGame" onclick="startGame()">INICIAR JUEGO</button>
-    <div class="ranking">
+    <div class="ranking" id="ranking">
         <div class="nameRank">Nombre</div>
         <div class="nameRank">Victorias</div>
-        <div class="nameRank">Jugador 1</div>
-        <div class="nameRank">2</div>
     </div>
     <script async src="../javascript/home.js"></script>
 </body>

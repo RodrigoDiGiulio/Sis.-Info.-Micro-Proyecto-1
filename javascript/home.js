@@ -1,23 +1,96 @@
 setInterval(redToYellow, 500);
+// localStorage.clear();
 
 var bingoColor;
+
+var tempName = [];
 var cardSize;
-var turn = 1;
+
+var turn = 0;
 var ballUsed = [];
 
-var player1 = {"name":"A","point":0};
-var player2 = {"name":"B","point":0};
-var player3 = {"name":"C","point":0};
-var player4 = {"name":"D","point":0};
+var player1 = {"name":"Jugador 1","point":0};
+var player2 = {"name":"Jugador 2","point":0};
+var player3 = {"name":"Jugador 3","point":0};
+var player4 = {"name":"Jugador 4","point":0};
+var players = [player1,player2,player3,player4];
+
+canWePlay();
 
 createBox(player1);
 createBox(player2);
 createBox(player3);
 createBox(player4);
 
-// nextTurn();
-nexBall();
 // shadowMachine();
+
+function loadPlayerData(){
+    var keys = [];
+    for (i = 0; i < localStorage.length; i++){
+        if (localStorage.key(i) != "tempName"){
+            keys.push(localStorage.key(i));
+        }
+    }
+    for (i = 0; i < keys.length; i++){
+        var playerName = document.createElement("div");
+        playerName.id = keys[i];
+        playerName.className = "nameRank";
+        playerName.innerHTML = keys[i];
+        document.getElementById("ranking").appendChild(playerName);
+
+        var playerStat = document.createElement("div");
+        playerStat.id = localStorage.getItem(keys[i]);
+        playerStat.className = "nameRank";
+        playerStat.innerHTML = playerStat.id.length;
+        document.getElementById("ranking").appendChild(playerStat);
+    }
+    console.log(keys);
+}
+
+function canWePlay(){
+    if (document.getElementById("5X5") !== null || document.getElementById("3X3") !== null){
+        getSettings();
+    }else{
+        loadPlayerData();
+        cardSize = 0;
+        tempName = [];
+    }
+}
+
+function savePlayerData(player){
+    if (localStorage.getItem(player.name)){
+        var wins = localStorage.getItem(player.name);
+        localStorage.setItem(player.name, wins+1);
+    }else{
+        localStorage.setItem(player.name, 1);
+    }
+}
+
+function setSettings(){
+    localStorage.setItem("tempName", tempName);
+}
+
+function getSettings(){
+    var tempString = localStorage.getItem("tempName");
+    tempName = tempString.split(",")
+    console.log(tempName);
+
+    player1.name = tempName[0];
+    player2.name = tempName[1];
+    player3.name = tempName[2];
+    player4.name = tempName[3];
+}
+
+function winner(){
+    var winner = {"name":"EMPATE","point":0};
+    for (i = 0; i < players.length;i++){
+        if (winner.point < players[i].point){
+            winner.name = players[i].name;
+            winner.point = players[i].point;
+        }
+    }
+    savePlayerData(winner);
+}
 
 function updatePoint(card) {
     var name = card.name;
@@ -48,6 +121,7 @@ function nextTurn() {
         updatePoint(player4);
         document.getElementById("nextTurn").innerHTML = "REINICIAR";
         turn++;
+        winner();
     }
     else{
         window.location.reload(true);
@@ -269,7 +343,7 @@ function checkCardPoint(card){
         }
     }
     else if (document.getElementById("5X5")){
-        for (i = 0; i < 29; i++){
+        for (i = 0; i < 30; i++){
             if (document.getElementById(card.name+"card").children[i].style.backgroundColor == "rgb(31, 200, 43)"){
                 if (i == 5 || i == 10 || i == 15 || i == 20 || i == 25){
                     v1++;
@@ -339,7 +413,7 @@ function checkCardPoint(card){
             card.point += 1
             console.log("VERTICAL 4",card.name)
         }
-        if (v4 == 5){
+        if (v5 == 5){
             card.point += 1
             console.log("VERTICAL 5",card.name)
         }
@@ -412,16 +486,27 @@ function startGame() {
     player2.name = document.getElementById('player2').value;
     player3.name = document.getElementById('player3').value;
     player4.name = document.getElementById('player4').value;
-    var debug = player1.name + player2.name + player3.name + player4.name;
-    alert(debug);
+
+    tempName.push(player1.name);
+    tempName.push(player2.name);
+    tempName.push(player3.name);
+    tempName.push(player4.name);
+
+    if (cardSize == 3){
+        setSettings();
+        window.location.href = '3x3.html';
+    }else if (cardSize == 5){
+        setSettings();
+        window.location.href = '5x5.html';
+    }else{
+        alert("SELECCIONE UN TIPO DE CARTON\n3X3 o 5X5");
+    }
 }
 
 function cardSelected3x3() {
-    cardSize = 3
-    alert('3X3!');
+    cardSize = 3;
 }
 
 function cardSelected5x5() {
-    cardSize = 5
-    alert('5X5!');
+    cardSize = 5;
 }
