@@ -1,6 +1,5 @@
 setInterval(redToYellow, 500);
 // localStorage.clear();
-
 var bingoColor;
 
 var tempName = [];
@@ -9,10 +8,10 @@ var cardSize;
 var turn = 0;
 var ballUsed = [];
 
-var player1 = {"name":"Jugador 1","point":0};
-var player2 = {"name":"Jugador 2","point":0};
-var player3 = {"name":"Jugador 3","point":0};
-var player4 = {"name":"Jugador 4","point":0};
+var player1 = {"name":"Jugador 1","point":0,"visible":true};
+var player2 = {"name":"Jugador 2","point":0,"visible":true};
+var player3 = {"name":"Jugador 3","point":0,"visible":true};
+var player4 = {"name":"Jugador 4","point":0,"visible":true};
 var players = [player1,player2,player3,player4];
 
 canWePlay();
@@ -23,6 +22,22 @@ createBox(player3);
 createBox(player4);
 
 // shadowMachine();
+
+// Get the button element
+const cardButton = document.querySelector('button[type="cardButton"]');
+let isVisible = true; // Initialize isVisible
+
+function toggleVisibility(cardName) {
+    isVisible = !isVisible;
+    if (isVisible) {
+        cardButton.classList.remove('hidden');
+    } else {
+        cardButton.classList.add('hidden');
+    }
+}
+
+
+
 
 function loadPlayerData(){
     var keys = [];
@@ -161,8 +176,12 @@ function createBox(card){
 
     var newCard = document.createElement("div");
     newCard.className = "card";
-    newCard.id = card.name+"card";
+    newCard.id = card.name + "card";
+    newCard.onclick = function() {
+        toggleVisibility(card.name);
+    };
     document.getElementById(card.name).appendChild(newCard);
+    
 
     if (document.getElementById("3X3")){
         var numUsed = [];

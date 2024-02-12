@@ -113,20 +113,36 @@ button[type="startGame"]:hover{
     background-color: #1fc82b;
 }
 
-button[type="cardButton"]{
+button[type="cardButton"] {
     /* COLOR */
     background-color: transparent;
+    /* BORDER */
+    border-color: transparent;
+    /* Ensure button covers its children */
+    position: relative;
+    overflow: hidden;
+}
 
+button[type="cardButton"]:hover {
+    /* COLOR */
+    background-color: #27b500;
     /* BORDER */
     border-color: transparent;
 }
 
-button[type="cardButton"]:hover{
-    /* COLOR */
-    background-color: #27b500;
-
-    /* BORDER */
-    border-color: transparent;
+button[type="cardButton"].hidden::after {
+    content: "CLICK PARA VER";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #de1818;
+    color: white;
+    font-weight: bold;
 }
 
 input[type="player"] {
@@ -185,8 +201,8 @@ input[type="player"] {
 .ranking {
     /* MARGIN */
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin-top: 0vw;
+    margin-bottom: 1vw;
 
     /* SIZE */
     width: 100%;
@@ -197,29 +213,31 @@ input[type="player"] {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 0;
+    place-items: center;
     justify-items: center;
     align-items: center;
 }
 
 .cardSelector {
     /* MARGIN */
-    margin-left: 0vw;
-    margin-right: 0vw;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 
     /* SIZE */
     width: 100vw;
-    height: auto;
+    max-width: calc(100vw - 17px);
 
     /* GRID */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20vw, 0fr));
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
     gap: 5vw;
+    place-items: center;
+    justify-items: center;
+    align-items: center;
 
     /* BORDER */
     border: 0px solid #000000;
 }
+
 
 .cardSelectorHome {
     /* MARGIN */
@@ -230,13 +248,15 @@ input[type="player"] {
 
     /* SIZE */
     width: 100vw;
-    height: auto;
+    max-width: calc(100vw - 17px);
 
     /* GRID */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5vw;
     place-items: center;
+    justify-items: center;
+    align-items: center;
 
     /* BORDER */
     border: 0px solid #000000;
@@ -252,7 +272,7 @@ input[type="player"] {
 
     /* GRID */
     display: grid;
-    grid-template-columns: repeat(5, 0fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 0;
 
     /* BORDER */
@@ -265,15 +285,13 @@ input[type="player"] {
     font-size: 2rem;
     font-family: monospace;
     font-weight: bold;
-    line-height: 1.25; /* Adjust as needed */
+    line-height: 1.25;
     color: #000000;
 
     /* MARGIN */
-    margin-left: -1.8vw;
-    margin-right: 0vw;
-    margin-top: 0vw;
-    margin-bottom: 0vw;
+    margin: 0 auto;
 }
+
 
 .emptyBox {
     /* SIZE */
@@ -285,7 +303,7 @@ input[type="player"] {
     font-size: 3vw;
     font-family: monospace;
     font-weight: bold;
-    line-height: 3.5vw; /* Adjust as needed */
+    line-height: 3.5vw;
     color: #000000;
 
     /* MARGIN */
@@ -329,22 +347,21 @@ input[type="player"] {
     gap: 2vw;
 
     /* MARGIN */
-    margin-left: 0;
-    margin-right: 1vw;
-    margin-top: 2vw;
-    margin-bottom: 0;
+    margin: 2vw 1vw 0 0;
+    place-items: center;
 }
+
 
 .ball {
     /* BALL */
-    width: 5vw; /* Use viewport width (responsive) */
-    height: 5vw; /* Use viewport width (responsive) */
+    width: 5vw;
+    height: 5vw;
     background-color: #EEEEEE;
     border-radius: 50%;
 
     /* TEXT */
     text-align: center;
-    font-size: 3vw; /* Responsive font size */
+    font-size: 3vw;
     font-family: monospace;
     font-weight: bold;
     line-height: normal;
@@ -353,7 +370,7 @@ input[type="player"] {
     /* BORDER */
     border-style: solid;
     border-color: #393E46;
-    border-width: 1vw; /* Simplified border width */
+    border-width: 1vw;
 
     /* CENTERING */
     display: flex;
